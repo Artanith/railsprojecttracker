@@ -1,14 +1,29 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tasklists</h1>
+<h1>Task List</h1>
 
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Task</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
 <div id="tasklists">
   <% @tasklists.each do |tasklist| %>
-    <%= render tasklist %>
-    <p>
-      <%= link_to "Show this tasklist", tasklist %>
-    </p>
+    <tr>
+      <td><%= tasklist.task %></td>
+      <td><%= tasklist.duedate %></td>
+      <td><%= tasklist.status %></td>
+      <td>
+        <%= link_to 'Delete', tasklist, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-outline-danger btn-sm" %>
+      </td>
+    </tr>
   <% end %>
 </div>
 
-<%= link_to "New tasklist", new_tasklist_path %>
+<%= link_to "New Task", new_tasklist_path, class:"btn btn-secondary" %>

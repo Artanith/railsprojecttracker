@@ -3,8 +3,8 @@
 <%= render @tasklist %>
 
 <div>
-  <%= link_to "Edit this tasklist", edit_tasklist_path(@tasklist) %> |
-  <%= link_to "Back to tasklists", tasklists_path %>
+  <%= link_to "Edit this tasklist", edit_tasklist_path(@tasklist), class:"btn btn-secondary" %> |
+  <%= link_to "Back to tasklists", tasklists_path, class:"btn btn-secondary" %>
 
-  <%= button_to "Destroy this tasklist", @tasklist, method: :delete %>
+  <%= button_to "Destroy this tasklist", @tasklist, method: :delete, class:"btn btn-danger" %>
 </div>
