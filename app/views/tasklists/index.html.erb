@@ -8,22 +8,23 @@
       <th>Task</th>
       <th>Date</th>
       <th>Status</th>
-      <th> </th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
-<div id="tasklists">
-  <% @tasklists.each do |tasklist| %>
-    <tr>
-      <td><%= tasklist.task %></td>
-      <td><%= tasklist.duedate %></td>
-      <td><%= tasklist.status %></td>
-      <td>
-        <%= link_to 'Delete', tasklist, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-outline-danger btn-sm" %>
-      </td>
-    </tr>
-  <% end %>
-</div>
+    <% @tasklists.each do |tasklist| %>
+      <tr>
+        <td><%= tasklist.task %></td>
+        <td><%= tasklist.duedate %></td>
+        <td><%= tasklist.status %></td>
+        <td>
+          <%= link_to 'Delete', tasklist, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-outline-danger btn-sm" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br/>
 
 <%= link_to "New Task", new_tasklist_path, class:"btn btn-secondary" %>
