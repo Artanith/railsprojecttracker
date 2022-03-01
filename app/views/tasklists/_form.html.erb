@@ -12,21 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :task, style: "display: block" %>
+    <%= form.label :Task, style: "display: block" %>
     <%= form.text_field :task %>
   </div>
 
   <div>
-    <%= form.label :duedate, style: "display: block" %>
+    <%= form.label :Date, style: "display: block" %>
     <%= form.date_field :duedate %>
   </div>
 
   <div>
-    <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
+    <%= form.label :Status, style: "display: block" %>
+    <%= form.select :status, options_for_select([["Select One", ""], "In Work", "Complete"]), :class => 'genForm_dropBox' %>
   </div>
-
+<br/>
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>
