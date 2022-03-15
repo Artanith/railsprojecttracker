@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.link-color a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
