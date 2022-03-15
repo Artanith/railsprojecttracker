@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<div class="container-md bg-light rounded-3">
+  <p style="color: green"><%= notice %></p>
 
-<%= render @tasklist %>
+  <%= render @tasklist %>
 
-<div>
-  <%= link_to "Edit this tasklist", edit_tasklist_path(@tasklist), class:"btn btn-secondary" %> |
-  <%= link_to "Back to tasklists", tasklists_path, class:"btn btn-secondary" %>
-
-  <%= button_to "Destroy this tasklist", @tasklist, method: :delete, class:"btn btn-danger" %>
+  <div>
+    <%= link_to "Edit", edit_tasklist_path(@tasklist), class:"btn btn-secondary" %> |
+    <%= link_to "Back", tasklists_path, class:"btn btn-secondary" %>
+  </div>
+  <br/>
+  <div>
+    <%= button_to "Delete", @tasklist, method: :delete, class:"btn btn-danger" %>
+  </div>
 </div>

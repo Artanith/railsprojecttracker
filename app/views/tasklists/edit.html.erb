@@ -1,10 +1,9 @@
-<h1>Edit Task</h1>
-
-<%= render "form", tasklist: @tasklist %>
-
-<br>
-
-<div>
-  <%= link_to "Show this tasklist", @tasklist, class:"btn btn-secondary" %> |
-  <%= link_to "Back to tasklists", tasklists_path, class:"btn btn-secondary" %>
+<div class="container-md bg-light rounded-3">
+  <h1>Edit Task</h1>
+  <br/>
+  <%= render "form", tasklist: @tasklist %>
+  <br>
+  <div>
+    <%= link_to "Back", tasklists_path, class:"btn btn-secondary" %>
+  </div>
 </div>

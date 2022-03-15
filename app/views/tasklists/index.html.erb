@@ -1,21 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Task List</h1>
-
-<table class="table table-striped table-bordered table-hover">
-  <thead class="table-dark">
+<table class="table table-striped table-bordered table-hover table-dark">
+  <thead>
     <tr>
-      <th>Task</th>
-      <th>Date</th>
-      <th>Status</th>
-      <th></th>
+      <th class="col-7">Task</th>
+      <th class="col-2">Date</th>
+      <th class="col-2">Status</th>
+      <th class="col-1"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @tasklists.each do |tasklist| %>
       <tr>
-        <td><%= tasklist.task %></td>
+        <td><%= link_to tasklist.task, tasklist %></td>
         <td><%= tasklist.duedate %></td>
         <td><%= tasklist.status %></td>
         <td>

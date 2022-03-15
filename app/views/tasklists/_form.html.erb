@@ -11,22 +11,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :task, style: "display: block" %>
-    <%= form.text_field :task %>
+  <div class="form-group">
+    <%= form.text_field :task, class:"form-control", placeholder: "Task" %>
   </div>
-
-  <div>
-    <%= form.label :duedate, style: "display: block" %>
-    <%= form.date_field :duedate %>
+  <br/>
+  <div class="form-group">
+    <%= form.date_field :duedate, class:"form-control", placeholder: "Due Date" %>
   </div>
-
-  <div>
-    <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
+  <br/>
+  <div class="form-group form-select">
+    <%= form.text_field :status, class:"form-control", placeholder: "Status" %>
   </div>
-
+  <br/>
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>
