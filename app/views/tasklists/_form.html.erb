@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<<<<<<< HEAD
+
   <div class="form-group">
     <%= form.text_field :task, class:"form-control", placeholder: "Task" %>
   </div>
@@ -23,24 +23,8 @@
   <div class="form-group form-select">
     <%= form.text_field :status, class:"form-control", placeholder: "Status" %>
   </div>
-  <br/>
-=======
-  <div>
-    <%= form.label :Task, style: "display: block" %>
-    <%= form.text_field :task %>
-  </div>
-
-  <div>
-    <%= form.label :Date, style: "display: block" %>
-    <%= form.date_field :duedate %>
-  </div>
-
-  <div>
-    <%= form.label :Status, style: "display: block" %>
-    <%= form.select :status, options_for_select([["Select One", ""], "In Work", "Complete"]), :class => 'genForm_dropBox' %>
-  </div>
 <br/>
->>>>>>> 79c6247490c606c30370bd0fa6eb29a668b722ff
+
   <div>
     <%= form.submit class:"btn btn-secondary" %>
   </div>
